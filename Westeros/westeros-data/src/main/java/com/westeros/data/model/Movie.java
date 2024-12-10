@@ -20,6 +20,8 @@ public class Movie {
     private String homepage;
     private String originalLanguage;
     private String originalTitle;
+    @Lob
+    @Column(columnDefinition = "TEXT")
     private String overview;
     private double popularity;
     private String posterPath;

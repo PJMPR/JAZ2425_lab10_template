@@ -18,6 +18,8 @@ public class Actor {
     private String name;
     private String profilePath;
     private String alsoKnownAs;
+    @Lob
+    @Column(columnDefinition = "TEXT")
     private String biography;
     private LocalDate birthday;
     private LocalDate deathday;

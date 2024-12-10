@@ -13,6 +13,7 @@ import com.westeros.moviesclient.contract.CreditsDto;
 import com.westeros.moviesclient.contract.IHaveName;
 import com.westeros.moviesclient.contract.MovieDto;
 import com.westeros.moviesclient.contract.PagedResultDto;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -22,6 +23,7 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 @Service
+@Transactional
 public class MoviesUpdater implements IUpdateMovies{
 
     private final ICatalogData data;
