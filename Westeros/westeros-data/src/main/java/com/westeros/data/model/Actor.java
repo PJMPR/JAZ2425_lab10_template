@@ -24,7 +24,7 @@ public class Actor {
     private double popularity;
 
     @OneToMany(mappedBy = "actor")
-    private List<Character> characters = new ArrayList<>();
+    private List<ActorRole> characters = new ArrayList<>();
 
     public long getId() {
 
@@ -99,11 +99,11 @@ public class Actor {
         this.popularity = popularity;
     }
 
-    public List<Character> getCharacters() {
+    public List<ActorRole> getCharacters() {
         return characters;
     }
 
-    public void setCharacters(List<Character> character) {
+    public void setCharacters(List<ActorRole> character) {
         this.characters = character;
     }
 

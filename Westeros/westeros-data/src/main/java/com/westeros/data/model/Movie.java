@@ -40,7 +40,7 @@ public class Movie {
     private List<Language> spokenLanguages = new ArrayList<>();
 
     @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL)
-    private List<Character> characters = new ArrayList<>();
+    private List<ActorRole> characters = new ArrayList<>();
 
     public long getSourceId() {
         return sourceId;
@@ -194,11 +194,11 @@ public class Movie {
         this.spokenLanguages = spokenLanguages;
     }
 
-    public List<Character> getCharacters() {
+    public List<ActorRole> getCharacters() {
         return characters;
     }
 
-    public void setCharacters(List<Character> character) {
+    public void setCharacters(List<ActorRole> character) {
         this.characters = character;
     }
 
